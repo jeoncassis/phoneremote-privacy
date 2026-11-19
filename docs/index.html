@@ -1,0 +1,62 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>폰 원격 도우미 개인정보처리방침</title><style>body{max-width:760px;margin:auto;padding:16px;font-family:sans-serif;line-height:1.6}table{border-collapse:collapse;width:100%}td,th{border:1px solid #ccc;padding:6px;text-align:left}</style></head><body><h1>폰 원격 도우미 개인정보처리방침</h1>
+<p><b>최종 업데이트</b>: 2026년 11월 19일</p>
+<p>'폰 원격 도우미'(이하 "앱")는 가족·지인의 폰 화면을 보고 대신 눌러 줄 수 있게 하는 원격 도움 앱입니다. 이 방침은 앱이 어떤 정보를 어떻게 다루는지 설명합니다.</p>
+<h2>1. 수집하는 정보</h2>
+<table><tr><th>정보</th><th>어디로</th><th>목적·보관</th></tr>
+<tr><td>도와주는 분이 입력한 이름(별명 가능)</td><td>Google Firebase(Firestore)</td><td>상대 폰의 '허용' 창에 누가 연결하려는지 보여 주기 위해 사용. 연결 중에만 저장되고 연결이 끝나면 삭제</td></tr>
+<tr><td>연결 정보(6자리 연결 번호, 연결 상태, 연결에 필요한 네트워크 주소(IP 주소 포함))</td><td>Google Firebase(Firestore)</td><td>두 폰을 서로 연결하기 위해 사용. 연결이 끝나면 삭제</td></tr>
+<tr><td>광고 ID 등 기기 정보</td><td>Google AdMob</td><td>첫 화면 배너 광고 표시 및 광고 성과 측정</td></tr></table>
+<p>앱은 회원가입·로그인 없이 사용하며, 이메일·전화번호 등 개인을 식별할 수 있는 정보를 수집하지 않습니다.</p>
+<h2>2. 화면 영상과 원격 조종</h2>
+<p>• 화면 공유는 도움 받는 분이 '허용'을 누르고 Android 화면 공유 동의 창에서 시작을 눌러야만 시작됩니다. 연결 중에는 알림이 계속 표시되며, 어느 쪽에서든 언제든 끝낼 수 있습니다.</p>
+<p>• 화면 영상, 도와주는 분의 터치와 입력한 글자는 두 폰 사이에서 WebRTC로 <b>직접(P2P) 암호화되어 전달</b>됩니다. 개발자 서버를 거치지 않으며 어디에도 저장되지 않습니다.</p>
+<h2>3. 접근성 서비스(AccessibilityService API) 사용</h2>
+<p>앱의 '대신 눌러 주기' 기능은 Android 접근성 서비스를 사용합니다.</p>
+<p>• <b>하는 일</b>: 원격 도움 중에 도와주는 분이 누른 위치·밀기, 뒤로·홈·최근 앱·알림창 버튼, 넣은 글자를 이 폰에서 대신 실행합니다.</p>
+<p>• <b>언제</b>: 도움 받는 분이 허용하고 화면 공유를 시작한 동안에만 동작합니다. 연결이 없을 때는 아무것도 하지 않습니다.</p>
+<p>• <b>정보</b>: 화면 내용이나 입력 내용을 읽어 저장하거나 개발자·제3자에게 보내지 않습니다. 글자 넣기 때는 현재 입력칸 하나만 찾아 글자를 넣습니다.</p>
+<p>• 앱은 접근성 설정으로 안내하기 전에 앱 안에서 이 내용을 알리고 동의를 받습니다. 접근성 서비스는 휴대폰 설정 &gt; 접근성에서 언제든 끌 수 있으며, 끄더라도 화면 보여 주기는 사용할 수 있습니다.</p>
+<h2>4. 사용하는 권한</h2>
+<table><tr><th>권한</th><th>용도</th></tr>
+<tr><td>인터넷</td><td>두 폰 연결, 광고 표시, 새 버전 확인</td></tr>
+<tr><td>화면 공유(미디어 프로젝션)·포그라운드 서비스</td><td>허용한 연결 동안 화면을 상대 폰으로 보내기</td></tr>
+<tr><td>알림</td><td>연결 중임을 알리고 알림에서 바로 끝내기</td></tr>
+<tr><td>화면 켜짐 유지</td><td>연결 중 화면이 꺼져 상대에게 검게 보이는 것을 방지</td></tr>
+<tr><td>접근성 서비스</td><td>대신 눌러 주기(위 3항)</td></tr></table>
+<h2>5. 제3자 서비스</h2>
+<p>• Google Firebase — <a href="https://firebase.google.com/support/privacy">https://firebase.google.com/support/privacy</a></p>
+<p>• Google AdMob — <a href="https://policies.google.com/technologies/ads">https://policies.google.com/technologies/ads</a></p>
+<p>• 연결 주소 확인용 공개 STUN 서버(Google, Cloudflare)에 네트워크 주소 확인 요청이 전송됩니다.</p>
+<h2>6. 데이터 보관 및 삭제</h2>
+<p>연결 정보와 이름은 연결이 끝나면 자동으로 삭제됩니다. 개발자는 화면·터치·글자를 보관하지 않습니다. 앱을 삭제하면 기기 안의 설정도 함께 삭제됩니다. 광고 ID는 기기 설정에서 초기화하거나 삭제할 수 있습니다.</p>
+<h2>7. 어린이 개인정보 보호</h2>
+<p>앱은 만 13세 미만 어린이를 대상으로 하지 않습니다.</p>
+<h2>8. 방침 변경</h2>
+<p>방침이 변경되면 이 페이지에 게시합니다.</p>
+<h2>9. 문의</h2>
+<p>• 이메일: jeoncassis@gmail.com</p>
+<p>• 개발자: PublicDev-Lab</p>
+<hr>
+<h1>Phone Remote Helper Privacy Policy</h1>
+<p><b>Last updated</b>: November 19, 2026</p>
+<h2>1. Information we collect</h2>
+<table><tr><th>Data</th><th>Sent to</th><th>Purpose / retention</th></tr>
+<tr><td>Name entered by the helper (nickname allowed)</td><td>Google Firebase (Firestore)</td><td>Shown in the "Allow" prompt on the other phone. Stored only during the session and deleted when it ends</td></tr>
+<tr><td>Connection data (6-digit code, session state, network addresses including IP addresses)</td><td>Google Firebase (Firestore)</td><td>Used to connect the two phones. Deleted when the session ends</td></tr>
+<tr><td>Advertising ID and device information</td><td>Google AdMob</td><td>Banner ad on the home screen and ad measurement</td></tr></table>
+<p>No account is required. We do not collect emails, phone numbers or other personal identifiers.</p>
+<h2>2. Screen video and remote control</h2>
+<p>Screen sharing starts only after the person being helped taps "Allow" and starts Android's screen-sharing prompt. A notification is shown throughout and either side can end the session at any time. Screen video, the helper's touches and typed text travel <b>directly between the two phones (peer-to-peer) with encryption</b> via WebRTC. They never pass through or get stored on the developer's servers.</p>
+<h2>3. Use of the AccessibilityService API</h2>
+<p>The "tap for me" feature uses the Android AccessibilityService API. Only while the person being helped has allowed the session and started screen sharing, it performs the helper's taps, swipes, Back/Home/Recent apps/notification buttons and typed text on that phone. It does not read, store or send screen content or input to the developer or third parties. The app shows an in-app disclosure and asks for consent before opening the accessibility settings. It can be turned off at any time in Settings &gt; Accessibility; screen sharing still works without it.</p>
+<h2>4. Permissions</h2>
+<p>Internet (connecting, ads, update check), screen capture / foreground service (sending the screen during an allowed session), notifications (session status and ending), wake lock (keeping the screen on during a session), accessibility service (section 3).</p>
+<h2>5. Third-party services</h2>
+<p>Google Firebase, Google AdMob, and public STUN servers (Google, Cloudflare) used to discover network addresses.</p>
+<h2>6. Retention and deletion</h2>
+<p>Connection data and names are deleted automatically when a session ends. The developer keeps no screen, touch or text data.</p>
+<h2>7. Children</h2>
+<p>The app is not directed at children under 13.</p>
+<h2>8. Contact</h2>
+<p>jeoncassis@gmail.com · PublicDev-Lab</p>
+</body></html>
